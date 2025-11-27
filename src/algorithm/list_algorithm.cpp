@@ -23,12 +23,12 @@ ListAlgorithms::reverse_list(learn::ds::ListNode<int32_t> *head) {
   ds::ListNode<int32_t>* curr = head;
 
   while (curr) {
-    ds::ListNode<int32_t>* tmp = curr->next;
+    ds::ListNode<int32_t>* temp = curr->next;
     curr->next = prev;
     prev = curr;
-    curr = tmp;
+    curr = temp;
   }
-
+  
   return prev;
 }
 
@@ -38,7 +38,6 @@ void ListAlgorithms::dump_list(learn::ds::ListNode<int32_t>* head) {
       std::cout << curr->value << std::endl;
       curr = curr->next;
     }
-  
 }
 
 } // namespace algorithm
